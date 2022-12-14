@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "description": "Pedir suco",
+    "phrasePt": "Pode me trazer um suco de laranja, por favor?",
+    "phraseEn": "Can I have an orange juice, please?",
+    "audio:": "../assets/audios/suco.wav"
+  },
+  {
+    "id": 2,
+    "description": "Pedir suco",
+    "phrasePt": "Pode me trazer um suco de laranja, por favor?",
+    "phraseEn": "Can I have an orange juice, please?",
+    "audio:": "../assets/audios/suco.wav"
+  }
+]

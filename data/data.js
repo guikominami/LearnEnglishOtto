@@ -59,16 +59,72 @@ export const PHRASES = [
   ),
   new Phrase(
     9,
-    "Dizer a nacionalidade",
+    "Dizer a nacionalidade.",
     "Eu sou brasileiro.",
     "I am brazilian.",
     require("../assets/audios/nome.wav")
   ),
   new Phrase(
     10,
-    "Pedir um sanduíche",
+    "Pedir um sanduíche.",
     "Pode me trazer um mixto quente, por favor?",
     "Can I have a ham and cheese sandwich, please?",
     require("../assets/audios/suco.wav")
-  ),    
+  ),
+  new Phrase(
+    11,
+    "Pedir água.",
+    "Pode me trazer um copo de água, por favor?",
+    "Can I have a glass of water, please?",
+    require("../assets/audios/suco.wav")
+  ),
+  new Phrase(
+    12,
+    "Perguntar como foi o dia.",
+    "Como foi o seu dia?",
+    "How was your day?",
+    require("../assets/audios/suco.wav")
+  ),
+  new Phrase(
+    13,
+    "Dizer boa noite.",
+    "Boa noite!",
+    "Good night!",
+    require("../assets/audios/bomdia.wav")
+  ),
+  new Phrase(
+    14,
+    "Pedir desculpas.",
+    "Desculpe me.",
+    "I'm sorry.",
+    require("../assets/audios/bomdia.wav")
+  ),
+  new Phrase(
+    15,
+    "Pedir licença.",
+    "Com licença.",
+    "Excuse me.",
+    require("../assets/audios/bomdia.wav")
+  ),
+  new Phrase(
+    16,
+    "Animar alguém.",
+    "Vamos lá.",
+    "Come on!",
+    require("../assets/audios/bomdia.wav")
+  ),
+  new Phrase(
+    17,
+    "Dizer que tem que ir embora.",
+    "Tenho que ir.",
+    "I’d better be going.",
+    require("../assets/audios/bomdia.wav")
+  ),     
+  new Phrase(
+    18,
+    "Dizer para alguém se cuidar.",
+    "Cuide-se.",
+    "Take care.",
+    require("../assets/audios/bomdia.wav")
+  ),
 ];

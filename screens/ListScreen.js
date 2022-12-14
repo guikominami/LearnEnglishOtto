@@ -1,10 +1,12 @@
 import { View, FlatList, StyleSheet, SafeAreaView } from "react-native";
 import { PHRASES } from "../data/data";
 import ListItem from "../components/ListItem";
+import jsonData from '../data/phraseData.json';
 
-function ListScreen({ navigation }) {
+const ListScreen = ({ navigation }) => {
+  const listItems = jsonData;
 
-  function renderCategoryItem(itemData) {
+  const renderCategoryItem = (itemData) => {
     function pressHandler() {
       navigation.navigate("DetailScreen", {
         phraseId: itemData.item.id,
@@ -30,7 +32,7 @@ function ListScreen({ navigation }) {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.listContainer}>
         <FlatList
-          data={PHRASES}
+          data={listItems.sort((a, b) => a.description.localeCompare(b.description))}
           keyExtractor={(item, index) => item.id}
           renderItem={renderCategoryItem}
           maxToRenderPerBatch={10}
