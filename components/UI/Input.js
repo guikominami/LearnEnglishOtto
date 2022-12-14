@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   label: {
-    fontSize: 22,
-    color: Colors.primary700,
+    fontSize: 18,
+    color: Colors.primary800,
     fontFamily: "open-sans",
     marginHorizontal: 10,
     marginBottom: 5
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   input:{
     fontSize: 20,
     backgroundColor: Colors.primary600,
-    color: Colors.primary700,
+    color: Colors.primary800,
     marginHorizontal: 10,
     textAlign: "left",
     padding: 10,

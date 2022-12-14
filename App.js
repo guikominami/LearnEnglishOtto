@@ -10,6 +10,7 @@ import ListScreen from "./screens/ListScreen";
 import DetailScreen from "./screens/DetailScreen";
 import InputScreen from "./screens/InputScreen";
 import Colors from "./constants/colors";
+import PhrasesContextProvider from "./store/phrase-context";
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -24,11 +25,11 @@ export default function App() {
     return (
       <Stack.Navigator
         screenOptions={{
-          headerStyle: { 
-            backgroundColor: Colors.primary800, 
+          headerStyle: {
+            backgroundColor: Colors.primary800,
           },
           headerTintColor: "white",
-          contentStyle: { backgroundColor: Colors.primary700 },
+          contentStyle: { backgroundColor: Colors.primary400 },
         }}
       >
         <Stack.Screen
@@ -51,39 +52,41 @@ export default function App() {
   };
 
   return (
-    <NavigationContainer>
-      <BottomTab.Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarStyle: {
-            backgroundColor: Colors.primary800,
-            borderTopWidth: 0,
-            inactiveColor: "white",
-          },
-          tabBarInactiveTintColor: "white",
-          tabBarActiveTintColor: Colors.primary600,
-        }}
-      >
-        <BottomTab.Screen
-          name="Lista de frases"
-          component={StackNavigator}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="document-text" color={color} size={size} />
-            ),
+    <PhrasesContextProvider>
+      <NavigationContainer>
+        <BottomTab.Navigator
+          screenOptions={{
+            headerShown: false,
+            tabBarStyle: {
+              backgroundColor: Colors.primary800,
+              borderTopWidth: 0,
+              inactiveColor: "white",
+            },
+            tabBarInactiveTintColor: "white",
+            tabBarActiveTintColor: Colors.primary400,
           }}
-        />
-        <BottomTab.Screen
-          name="Cadastro"
-          component={InputScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="person" color={color} size={size} />
-            ),
-          }}
-        />
-      </BottomTab.Navigator>
-    </NavigationContainer>
+        >
+          <BottomTab.Screen
+            name="Lista de frases"
+            component={StackNavigator}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Ionicons name="document-text" color={color} size={size} />
+              ),
+            }}
+          />
+          <BottomTab.Screen
+            name="Cadastro"
+            component={InputScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Ionicons name="person" color={color} size={size} />
+              ),
+            }}
+          />
+        </BottomTab.Navigator>
+      </NavigationContainer>
+    </PhrasesContextProvider>
   );
 }
 

@@ -1,8 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
-import { Entypo } from "@expo/vector-icons";
-
-import AudioPlayerButton from "./UI/AudioPlayerButton";
-import Colors from "../constants/colors";
+import IconButton from "../UI/IconButton";
+import AudioPlayerButton from "../UI/AudioPlayerButton";
+import Colors from "../../constants/colors";
 
 function ListItem({ description, audio, onPress }) {
   return (
@@ -14,14 +13,11 @@ function ListItem({ description, audio, onPress }) {
           </Text>
         </View>
         <View style={styles.buttonContainer}>
-          <Entypo
-            android_ripple={{ color: "#cccccc" }}
-            name="chevron-right"
-            size={32}
-            color={Colors.primary700}
-            onPress={onPress}
-            style={styles.icon}
-          />
+          <IconButton 
+            type={"chevron-right"} 
+            color={Colors.primary700} 
+            action={onPress} 
+           />           
           <AudioPlayerButton 
             audio={audio} 
             color={Colors.primary700}
@@ -38,12 +34,12 @@ const styles = StyleSheet.create({
   listItem: {
     flex: 1,
     flexDirection: "row",
-    borderColor: Colors.primary800,
+    borderColor: Colors.primary700,
     borderWidth: 1,
     borderRadius: 10,
     marginVertical: 4,
     marginHorizontal: 8,
-    backgroundColor: Colors.primary600,
+    backgroundColor: Colors.primary500,
     elevation: 4,
     //flexWrap: 'wrap',
   },

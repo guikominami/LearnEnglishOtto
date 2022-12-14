@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Entypo } from "@expo/vector-icons";
-import Colors from '../../constants/colors';
+import { View } from 'react-native';
 import { Audio } from 'expo-av';
+import IconButton from './IconButton';
 
-function AudioPlayerButton({ audio, color }){
-
+const AudioPlayerButton = ({ audio, color }) => {
+  
   const [sound, setSound] = React.useState();
 
   async function playSound() {
+
     const { sound } = await Audio.Sound.createAsync(audio);
 
     setSound(sound);
@@ -26,12 +26,10 @@ function AudioPlayerButton({ audio, color }){
 
   return(
     <View>
-      <Entypo 
-        android_ripple={{color: '#cccccc'}}                    
-        name="sound" 
-        size={32} 
-        color={color}
-        onPress={playSound} 
+      <IconButton 
+        type={"sound"} 
+        color={color} 
+        action={playSound} 
       />
     </View>    
   );

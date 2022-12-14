@@ -1,10 +1,11 @@
 import { View, FlatList, StyleSheet, SafeAreaView } from "react-native";
-import { PHRASES } from "../data/data";
-import ListItem from "../components/ListItem";
-import jsonData from '../data/phraseData.json';
+import ListItem from "../components/App/ListItem";
+import { useContext } from "react";
+import { PhraseContext } from "../store/phrase-context";
 
 const ListScreen = ({ navigation }) => {
-  const listItems = jsonData;
+
+  const phraseCtx = useContext(PhraseContext);
 
   const renderCategoryItem = (itemData) => {
     function pressHandler() {
@@ -19,6 +20,7 @@ const ListScreen = ({ navigation }) => {
 
     return (
       <ListItem
+        id={itemData.item.id}
         description={itemData.item.description}
         phrasePt={itemData.item.phrasePt}
         phraseEn={itemData.item.phraseEn}
@@ -32,7 +34,7 @@ const ListScreen = ({ navigation }) => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.listContainer}>
         <FlatList
-          data={listItems.sort((a, b) => a.description.localeCompare(b.description))}
+          data={phraseCtx.phrases.sort((a, b) => a.description.localeCompare(b.description))}
           keyExtractor={(item, index) => item.id}
           renderItem={renderCategoryItem}
           maxToRenderPerBatch={10}
