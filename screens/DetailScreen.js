@@ -26,7 +26,7 @@ const DetailScreen = ({ route, navigation }) => {
         <View style={styles.rightContainer}>
           <IconButton 
             type={"trash"} 
-            color={Colors.primary500} 
+            color={Colors.primary700} 
             action={deletePhrase} 
            />          
         </View>
@@ -39,7 +39,7 @@ const DetailScreen = ({ route, navigation }) => {
       <Text style={styles.title}>Ouça a frase:</Text>
       <AudioPlayerButton 
         audio={route.params.audio} 
-        color={Colors.primary500} 
+        color={Colors.primary700} 
       />
     </View>
   );
@@ -64,12 +64,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 25,
-    color: Colors.primary600,
+    color: Colors.primary800,
     fontFamily: "open-sans-bold",
   },
   item: {
     fontSize: 25,
-    color: Colors.primary500,
+    color: Colors.primary600,
     fontFamily: "open-sans",
     marginBottom: 30,
   },
