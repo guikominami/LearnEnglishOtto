@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
   },
   item: {
     fontSize: 25,
-    color: Colors.primary600,
     fontFamily: "open-sans",
     marginBottom: 30,
   },

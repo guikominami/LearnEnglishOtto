@@ -62,7 +62,7 @@ export const PHRASES = [
     "Dizer a nacionalidade.",
     "Eu sou brasileiro.",
     "I am brazilian.",
-    require("../assets/audios/nome.wav")
+    require("../assets/audios/nacionalidade.wav")
   ),
   new Phrase(
     10,
@@ -97,7 +97,7 @@ export const PHRASES = [
     "Pedir desculpas.",
     "Desculpe me.",
     "I'm sorry.",
-    require("../assets/audios/bomdia.wav")
+    require("../assets/audios/desculpa.wav")
   ),
   new Phrase(
     15,
@@ -108,10 +108,10 @@ export const PHRASES = [
   ),
   new Phrase(
     16,
-    "Animar alguém.",
+    "Vamos!",
     "Vamos lá.",
     "Come on!",
-    require("../assets/audios/bomdia.wav")
+    require("../assets/audios/vamos.wav")
   ),
   new Phrase(
     17,
@@ -125,7 +125,7 @@ export const PHRASES = [
     "Dizer para alguém se cuidar.",
     "Cuide-se.",
     "Take care.",
-    require("../assets/audios/bomdia.wav")
+    require("../assets/audios/cuida.wav")
   ),
   new Phrase(
     19,
@@ -162,4 +162,39 @@ export const PHRASES = [
     "Excuse me, where is the toilet, please?",
     require("../assets/audios/banheiro.wav")
   ),     
+  new Phrase(
+    24,
+    "Boa!",
+    "Boa!",
+    "Nice one!",
+    require("../assets/audios/boa.wav")
+  ),       
+  new Phrase(
+    25,
+    "Cumprimentar e dizer o nome.",
+    "Olá, meu nome é Otto.",
+    "Hello, my name is Otto.",
+    require("../assets/audios/nomesaudacao.wav")
+  ), 
+  new Phrase(
+    26,
+    "Dizer a idade.",
+    "Eu tenho 10 anos de idade.",
+    "I am 10 years old.",
+    require("../assets/audios/idade.wav")
+  ),
+  new Phrase(
+    27,
+    "Dizer onde mora.",
+    "Eu moro em Portugal.",
+    "I live in Portugal.",
+    require("../assets/audios/moro.wav")
+  ), 
+  new Phrase(
+    28,
+    "Quando conhece alguém.",
+    "Prazer em conhecê-la/o.",
+    "Nice to meet you.",
+    require("../assets/audios/conhece.wav")
+  ),    
 ];

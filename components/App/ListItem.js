@@ -13,15 +13,16 @@ function ListItem({ description, audio, onPress }) {
           </Text>
         </View>
         <View style={styles.buttonContainer}>
-          <IconButton 
-            type={"chevron-right"} 
-            color={Colors.primary700} 
-            action={onPress} 
-           />           
-          <AudioPlayerButton 
-            audio={audio} 
-            color={Colors.primary700}
-          />
+          <View style={styles.icon}>
+            <IconButton
+              type={"chevron-right"}
+              color={Colors.primary700}
+              action={onPress}
+            />
+          </View>
+          <View style={styles.icon}>
+            <AudioPlayerButton audio={audio} color={Colors.primary700} />
+          </View>
         </View>
       </View>
     </View>
@@ -46,7 +47,9 @@ const styles = StyleSheet.create({
   outerContainer: {
     flex: 1,
     flexDirection: "row",
-    padding: 16,
+    paddingTop: 16,
+    paddingBottom: 16,    
+    paddingLeft: 16,        
     justifyContent: "space-between",
     alignItems: "center",
   },
@@ -55,17 +58,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "center",
-    marginRight: 3    
+    marginRight: 10
   },
   buttonContainer: {
     flexDirection: "row-reverse",
-    alignItems: "center",
   },
   itemText: {
     fontWeight: "bold",
     fontSize: 20,
   },
   icon: {
-    paddingLeft: 10
+    marginHorizontal: 7
   },
 });
